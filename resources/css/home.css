@@ -1,0 +1,35 @@
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.user-profile-pic {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1swAOYA_AMfQJ7bvDXlOhKq_NjhAntAT74t-QvLpU0boL7U1aaqg8TydovuhIip4KTylKc2QNK6qRt4sDjIhPGdCegriQQykYu4djHRKPrZqPm3wSAHMM-3De6N5gW6vHQeOyn09HixWaz-a-i6HJ67OYVWD77Z1qovCAh5FCDQ-auR0QA0U630gnvobAG2J6566HWq_VdriW3JZ2F2dhUYMkD8SdCCRJhrcsOmfgWXid0hMBhkafCGJryNEpYJl3aSx8YDP7pAs");
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSXInnVNdoRcb8u0hXft3yE5-aqRGVeIjy_ZfzNsOcUeGrKmEAWOADwjUBdlO7gOEaEgxxN3inkomUKInEZu7KX16fi6jw74tHEBLWbhKidK6LnZ5CBPaCy2ujqbOXG9vCTzOeOCVpp5VO9il8GCNe6vpsMooRvtdSXbH1N0UlPZVcI2U0PCegCY4avfmUvSxMFTR7__Mt6tsCY1h9K0NptsjEnhIT3-X-ZmwhzWEAK-lFT7mNZcTwFmsSd8IOe2I502xlMlPNUAc");
+}
+
+.cookie-img-1 {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAf3pKZTBBWeO44MICxvUnOUCxGG-FpSZaNPFN-jfw7bbMeDQg8hHTZSeuSnYrtSI2wOL64DmAN4XjPnyzo3HyJmtIRTEte24DQC_Smk7UXKbPVyu1l1h72H5pNfL0eejD83lBA4PYrFPX5zRid_K86P_gLZlCSKL60yyRgt5gkkchvt7rFfQ6a7LhWDoVr3N499wTy8FbkzJDQTB1CUYuiYb-qzYxXRjnicWt5Pgdlw0kOGcp5PfqgyFp2ez0vhPSYug6Ia_Prgk");
+}
+
+.cookie-img-2 {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBesqIAZa7rpFWMNmamvOer3IeSyGXj-Udxf7EEjY7oCzH8zJij8zMtnJvEcgqTHpyLUVGE6xc4Pen6bxeRMigPLRLSYdut3RqWW6DgHkmygluUclvauR9jihq1WO3nb3an95-hzBCdXY2krybytIuG9p1Hl2ACsuLJInCspSHJQs2b99WL8-ZSXCs8usZ-RtGD0BYRxN4BP1BxqFDh9D-z2HiVFEz8_j0kRYs5bH35jzGbmTu3fdPAyHoGqETwyVNurrn4DkLaXoY");
+}
+
+.cookie-img-3 {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNyYFS2z-NwfpzmoNrASoWJsbMfSPT04F6ANe0K7xXuAwE-af-4O7bKhvhEUanSJJl07Le4IZP5V4XGUV5Xpzzj3cLzXsIQihApPBuhXVq0uP39kMCmo9bnJqppS1MN0UZ8XTWnfrP5sa7LiHVdBisiliM-OXSZWwFwAq1x6XyF4u5___zE2HOZRhkrjsdEiQT8b-kkkEFVZRWK2ILrkEM2hpa_t6BD5wWLU6H4Ot_fKOeDnGsjqsbKmoz_m39GjZiQc_UEzQov5g");
+}
+
+.cookie-img-4 {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAajCLlwH5UJiBZ8P7N7SHjwnVHNrNryplNBaONUIz9S-_P33ovXOZ3yrBIVIrpl4u7bC-MKBM5QKsPUsPn1E2XyftYjM1LA3wUah_jOQo6cYnlyIwcdtqh9oubfKBdiN0qwN6NSHrdLqk9B99whMvdb9hyj83jRzZ_AcGNkYBN_KY69glHJ7D5oEHLmJh-9WU1IEA8U7Rjh2uRWOnCekFUK509D-ztONzRMkPDa8fDT2Qu9IO-sFHXyxh9Gjs_yHP629DCXsjH5PY");
+}
+
+.about-us-img {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkeIt_V_yH3IfofteynXXZg1agi6W8dDTiBLOq8SprMfi7kPcdVcoq_s0ehJcmAknWR96gmaMeBYRKRoMZuuINN6Myn9ZQfmDtTMs5SiqGuogwRCPghm1pM-0CJNL3Df5CQtDiMfUPUOYlsk2aW3VHfCdlYBSwzpoHSTnnUVnYRS32KCpJXyAUjrT_6D7pMrgqnYOyE48GLj8OuOQcXJw6_rlN9A1GVua7R2qbLwUxBtSqQ5yNyYGyNlG6n3gTPrInlOg7mJYtwSk");
+}
