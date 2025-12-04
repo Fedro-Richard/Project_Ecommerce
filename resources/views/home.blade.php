@@ -3,8 +3,11 @@
 @section('title', 'Cookie Co. - Freshly Baked Artisanal Cookies')
 
 @section('content')
+<html>
+    
+<body>
 <main>
-    <!-- HeroSection -->
+ 
     <div class="px-4 lg:px-10 flex flex-1 justify-center py-5">
         <div class="layout-content-container flex flex-col w-full max-w-7xl">
             <div class="@container">
@@ -157,4 +160,7 @@
         </div>
     </div>
 </main>
+@include('bot')
+    </body>
+</html>
 @endsection

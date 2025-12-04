@@ -44,7 +44,7 @@
                             <a class="text-primary-secondary dark:text-background-light text-sm font-medium leading-normal hover:text-primary dark:hover:text-white transition-colors"
                                 href="/about">About Us</a>
                             <a class="text-primary-secondary dark:text-background-light text-sm font-medium leading-normal hover:text-primary dark:hover:text-white transition-colors"
-                                href="/transaction">Transactions</a>
+                                href="/bot">Transaksi</a>
                         </nav>
                         <div class="flex items-center gap-4">
                             <button

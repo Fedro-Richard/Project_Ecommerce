@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html class="light" lang="en">
 
@@ -16,56 +17,19 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     rel="stylesheet" />
    @vite(['resources/css/app.css', 'resources/css/productdetail.css','resources/js/productdetail.js'])
+
+@extends('layouts.app', ['assets' => ['resources/css/home.css', 'resources/js/home.js']])
+
+@section('title', 'Cookie Co. - Freshly Baked Artisanal Cookies')
+
+@section('content')
 </head>
 
 <body class="bg-background-light dark:bg-background-dark font-display text-secondary dark:text-tertiary">
   <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
     <div class="layout-container flex h-full grow flex-col">
 
-      <!-- TopNavBar -->
-      <header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-        <div class="px-4 lg:px-10 flex justify-center">
-          <div
-            class="flex items-center justify-between whitespace-nowrap border-b border-solid border-accent/30 py-4 w-full max-w-7xl">
-            <div class="flex items-center gap-4 text-primary dark:text-background-light">
-              <div class="size-6 text-primary dark:text-background-light">
-                <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z">
-                  </path>
-                </svg>
-              </div>
-              <h2 class="text-xl font-bold leading-tight tracking-[-0.015em]">Cookie Co.</h2>
-            </div>
-            <nav class="hidden md:flex flex-1 justify-center gap-8">
-              <a class="text-primary-secondary dark:text-background-light text-sm font-medium leading-normal hover:text-primary dark:hover:text-white transition-colors"
-                href="/home">
-                Home
-              </a>
-              <a class="text-primary-secondary dark:text-background-light text-sm font-medium leading-normal hover:text-primary dark:hover:text-white transition-colors"
-                href="/shop">
-                Shop
-              </a>
-              <a class="text-primary-secondary dark:text-background-light text-sm font-medium leading-normal hover:text-primary dark:hover:text-white transition-colors"
-                href="/about">
-                About Us
-              </a>
-              <a class="text-primary-secondary dark:text-background-light text-sm font-medium leading-normal hover:text-primary dark:hover:text-white transition-colors"
-                href="/transaction">
-                Transactions
-              </a>
-            </nav>
-            <div class="flex items-center gap-4">
-              <button
-                class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-transparent text-primary-secondary dark:text-background-light hover:bg-accent/20 dark:hover:bg-accent/10 transition-colors gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
-                <span class="material-symbols-outlined text-xl">shopping_cart</span>
-              </button>
-              <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 user-profile-pic"></div>
-            </div>
-          </div>
-        </div>
-      </header>
-
+      
 
       <!-- Main content -->
       <main class="container mx-auto flex-1 px-4 pt-10 sm:px-6 lg:px-8">
