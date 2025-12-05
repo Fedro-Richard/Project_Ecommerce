@@ -138,5 +138,6 @@
                         </div>
                     </div>
                 </div>
+                 @include('bot')
             </main>
 @endsection
