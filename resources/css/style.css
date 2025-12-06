@@ -1,13 +1,20 @@
 /* --- Variabel Global --- */
 :root {
-    --bg-color: #F7F4E9;        /* Warna Latar Krem */
-    --text-color: #4B3621;      /* Cokelat Tua */
-    --card-bg: #ffffff;         /* Putih (opsional) atau transparan */
-    --btn-primary: #D3Cbb8;     /* Warna Tombol Beige */
-    --btn-hover: #c4bcab;
-    --btn-dark: #4B3621;        /* Tombol Gelap (Checkout) */
-    --danger: #d9534f;          /* Warna Hapus */
-    --border-color: #e0dccf;
+    /* Latar dan teks utama */
+    --bg-color:      #592203;  /* dark brown agak maroon → background utama */
+    --text-color:    #f5f5dc;  /* light yellow / putih gading → warna teks utama */
+
+    /* Kartu dan border */
+    --card-bg:       #593a01;  /* dark brown → background card */
+    --border-color:  #b66828;  /* gray orange sebagai garis halus */
+
+    /* Tombol utama */
+    --btn-primary:   #fbab43;  /* orange terang → tombol utama */
+    --btn-hover:     #b66828;  /* gray orange → hover */
+    --btn-dark:      #593a01;  /* dark brown → tombol gelap / secondary */
+
+    /* Danger boleh tetap */
+    --danger:        #d9534f;
 }
 
 body {

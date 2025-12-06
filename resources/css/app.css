@@ -1,11 +1,166 @@
-@import 'tailwindcss';
+/* ============= PALET WARNA LAYOUT ============= */
+:root {
+    --layout-bg-dark:    #592203;  /* navbar + footer */
+    --layout-border:     #b66828;  /* garis bawah/atas */
+    --layout-text-light: #f5f5dc;  /* teks terang */
+    --layout-accent:     #fbab43;  /* hover nav / ikon */
+}
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
+/* ============= GLOBAL BODY ============= */
+body {
+    background-color: var(--layout-bg-dark);
+    color: var(--layout-text-light);
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system,
+                 BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+/* ============= SHELL UTAMA ============= */
+
+.app-shell {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* ============= NAVBAR ============= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    background-color: var(--layout-bg-dark);
+    border-bottom: 1px solid var(--layout-border);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* logo dibesarkan sedikit */
+.site-logo {
+    height: 100px;          /* naikin dari 40 → 56 */
+    width: auto;
+    display: block;
+}
+
+/* NAV MENU */
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.site-nav-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--layout-text-light);
+    text-decoration: none;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.site-nav-link:hover {
+    color: var(--layout-accent);
+}
+
+.site-nav-link.is-active {
+    text-decoration: underline;
+}
+
+/* ICON CART */
+
+.cart-link {
+    position: relative;
+    padding: 8px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--layout-text-light);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.cart-link:hover {
+    background-color: rgba(251, 171, 67, 0.12);
+    color: var(--layout-accent);
+    transform: scale(1.05);
+}
+
+/* ============= MAIN CONTENT ============= */
+
+.site-main {
+    flex: 1;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+/* ============= FOOTER ============= */
+
+.site-footer {
+    margin-top: auto;
+    background-color: var(--layout-bg-dark);
+    border-top: 1px solid var(--layout-border);
+}
+
+.site-footer-inner {
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    color: var(--layout-text-light);
+}
+
+.site-footer-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.site-footer-text-muted {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.site-footer-copy {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    margin-top: 8px;
+}
+
+/* ============= FONT NAVBAR & FOOTER (PLUS JAKARTA SANS) ============= */
+
+/* semua teks di header/navbar */
+.site-header,
+.site-nav-link,
+.cart-link {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* footer juga disamakan biar konsisten */
+.site-footer-inner,
+.site-footer-title,
+.site-footer-text-muted,
+.site-footer-copy {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* sedikit finetune nav biar mirip feel home page */
+.site-nav-link {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
 }

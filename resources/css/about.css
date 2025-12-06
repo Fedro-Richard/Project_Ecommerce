@@ -1,9 +1,16 @@
+/* ============================
+   FONTS & ICONS DARI FILE LAMA
+   ============================ */
+
 .font-serif { 
     font-family: 'Lora', serif; 
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(84, 51, 16, 0.4) 0%, rgba(84, 51, 16, 0.6) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuChZAesquDDJscvr1zA8dDYVTn0YPUYYNHdyE622Z0QuDibUb_wAjRPyakTqBWBrhDLLUeM3suYKe0nYf7xofq3Wn8HMVd-SPdSzgwnW8vQ5CTA0bIP6Y_QHbSrnyZB2EfJDsEaL2zeFHGxdej0fRnkhpZa2IybEo0qaxZFahF4unNTSly0lihGCy_38eqkQ-TRdx2xu3gF93aUqSCXm_9ty-FrnL7OarqYvC2fknNI_8tHy5dXa8-PA5el4qYnK4ZTXAzW0YZ7pnM");
+    background-image: linear-gradient(rgba(84, 51, 16, 0.4) 0%, rgba(84, 51, 16, 0.6) 100%), url("https://i.pinimg.com/736x/10/da/88/10da8828320007b8ce1199cbcf483b3f.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .story-img {
@@ -15,17 +22,404 @@
 }
 
 .gallery-img-1 {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCo_TwPOPFWYFTXfyZfy4ArXwytH8kgbE7y90dSUKBlwI-uk0r5fuve7yTUxYb5aJqCjmUaNTfsF8bO6mooR0ig6wRLkoX8HK_RvQOtrijMwAz4TfRP9EYLYONKXR8Uklw5-uEJxEbpBy2H7vtbEE67ugD-78jCvwL9d_WXKxJl-E03VhgBVD4jcr5PpmvjTD-PYoG18qBRXjzMivfJoj5qsjjtv3N5fbHAuf1LNq2mVif0hxURh7ZoikiiIrRlaIUYJUYhNyIEUf0");
+    background-image: url("https://i.pinimg.com/736x/cb/96/e4/cb96e4f5a9093a1c23a777eb8e3de12d.jpg");
 }
 
 .gallery-img-2 {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWeK-f62Y2eb4nA_ov_o_IoOS7PlC11qWm9QuMOdGjWHOM2A1Q0933yxpqUrUXkb9V6-OXnf_Sc-_qT_SqKPpBbXLKt8iOr2UKAJaKXQ2Zqgyf4C2ViyVq2qp3AbUuZW_7-x8CI6KLce8EgUODsmH1MKwBmPC8bMQ6qYEuIbw951r1jzZJ7IeYdqjMMbgzX4DCRQ0ynTj7XBTrtBXj1czJ5cFay-hzaNMp_V-yhI1RnwOo8F5DE9uMLXNRUQXvjFYL2y8E4Ncg_bw");
+    background-image: url("https://i.pinimg.com/736x/bd/8a/0b/bd8a0bf24af2af829227d2121172b03a.jpg");
 }
 
 .gallery-img-3 {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuANDEf71tWOfAEh4AV-NDWx6zbchX6uddl_fPxl2U65EBtn3NiwMxtsMqjkAQaLVH1npwvOu4KW_-FkwFFyC_Sukj0jfyiDs0j070BniXmYbDKMZPe6GclcsqvFs7U2DNBaBLfH2u6QdzDHwTq0ZIFUiaNeEI5qIjHMkOYN6-bY61_GBG5CGYlMN56D_xlaIYcou8pHu9znR5mM_Q1SiOZgxO7Ph8lF36Ov7w-tPkJN67u7zBooPee4MoudiU9bwjCSV8eovEcYqMw");
+    background-image: url("https://i.pinimg.com/736x/13/19/d5/1319d59f54932f6c93f6ed5b3a52818a.jpg");
 }
 
 .gallery-img-4 {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDA4DJmEeQeV-OOtVNBBcb13HMRe3dWs1w65OTqtKOXSy6K5mzIH9pspy-jdNZ2xZir_3b76FB_2ZkSe_c9dqTbB5MZQAY4zp9yo8CYJrw1LzXVzUZPNR7u1I3NKRFFOKWG55wysBnedcS-UE7xWcx1Z3i7rWair04Jw-OHyHVjlvBL-nUXq41ol3TBlQx6cJnVHz3oJWOCpOelTdZNIDthEslVmcvASW4bzJGUj6zug3nrOMoitYlhKMXZy_DsWxrUWo_QXVcVCrw");
+    background-image: url("https://i.pinimg.com/736x/0e/ed/be/0eedbef523c8d5dc8318034e098dcc5c.jpg");
+}
+
+/* ============================
+   COLOR TOKENS UNTUK ABOUT PAGE
+   ============================ */
+
+:root {
+    --about-brand-dark-chocolate: #543310;
+    --about-brand-coffee: #74512D;
+    --about-brand-tan: #AF8F6F;
+    --about-brand-parchment: #F8F4E1;
+    --about-bg-main: #F8F4E1;
+}
+
+/* ============================
+   MAIN WRAPPER
+   ============================ */
+
+.about-main {
+    flex: 1;
+    display: block;
+    background-color: var(--about-bg-main);
+}
+
+/* ============================
+   HERO SECTION
+   ============================ */
+
+.about-hero-section {
+    padding: 1.25rem 1rem; /* py-5 px-4 */
+}
+
+@media (min-width: 640px) {
+    .about-hero-section {
+        padding-left: 2.5rem;  /* sm:px-10 */
+        padding-right: 2.5rem;
+    }
+}
+
+.about-hero-maxwidth {
+    max-width: 72rem; /* max-w-6xl */
+    margin: 0 auto;   /* mx-auto */
+}
+
+.about-hero-container {
+    width: 100%;
+}
+
+.about-hero-padding {
+    padding: 0;       /* default */
+}
+
+@media (min-width: 480px) {
+    .about-hero-padding {
+        padding: 1rem; /* @[480px]:p-4 */
+    }
+}
+
+.about-hero-card {
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;          /* gap-6 */
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;        /* p-4 */
+    text-align: center;
+    border-radius: 0.5rem; /* rounded-lg */
+}
+
+@media (min-width: 480px) {
+    .about-hero-card {
+        gap: 2rem;        /* @[480px]:gap-8 */
+    }
+}
+
+.about-hero-textgroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;          /* gap-2 */
+    max-width: 32rem;     /* max-w-2xl */
+}
+
+/* judul hero */
+.about-hero-title {
+    color: #ffffff;
+    font-size: 2.25rem;   /* text-4xl */
+    font-weight: 700;
+    line-height: 1.25;    /* leading-tight */
+    letter-spacing: -0.02em;
+}
+
+@media (min-width: 480px) {
+    .about-hero-title {
+        font-size: 3rem;  /* text-5xl */
+    }
+}
+
+/* subjudul hero */
+.about-hero-subtitle {
+    color: rgba(255, 255, 255, 0.9); /* text-white/90 */
+    font-size: 0.875rem;  /* text-sm */
+    font-weight: 400;
+    line-height: 1.5;     /* leading-normal */
+}
+
+@media (min-width: 480px) {
+    .about-hero-subtitle {
+        font-size: 1rem;  /* text-base */
+    }
+}
+
+/* ============================
+   BRAND STORY SECTION
+   ============================ */
+
+.about-story-section {
+    padding: 2.5rem 1rem; /* py-10 px-4 */
+}
+
+@media (min-width: 640px) {
+    .about-story-section {
+        padding-left: 2.5rem;  /* sm:px-10 */
+        padding-right: 2.5rem;
+    }
+}
+
+.about-story-maxwidth {
+    max-width: 72rem;  /* max-w-6xl */
+    margin: 0 auto;
+}
+
+.about-story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;          /* gap-8 */
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .about-story-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* md:grid-cols-2 */
+        gap: 3rem;      /* md:gap-12 */
+    }
+}
+
+.about-story-image {
+    width: 100%;
+    border-radius: 0.5rem;              /* rounded-lg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 4 / 3;                /* aspect-[4/3] */
+}
+
+.about-story-textcol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;                           /* gap-4 */
+}
+
+/* judul story */
+.about-story-title {
+    color: var(--about-brand-dark-chocolate); /* text-brand-dark-chocolate */
+    font-size: 32px;                          /* text-[32px] */
+    font-weight: 700;
+    line-height: 1.25;                        /* leading-tight */
+}
+
+/* paragraf story */
+.about-story-paragraph {
+    color: var(--about-brand-coffee);         /* text-brand-coffee */
+    font-size: 1rem;                          /* text-base */
+    font-weight: 400;
+    line-height: 1.7;                         /* leading-relaxed */
+}
+
+/* ============================
+   MISSION / VALUES SECTION
+   ============================ */
+
+.about-mission-section {
+    padding: 2.5rem 1rem; /* py-10 px-4 */
+    background-color: rgba(175, 143, 111, 0.2); /* bg-brand-tan/20 */
+}
+
+@media (min-width: 640px) {
+    .about-mission-section {
+        padding-left: 2.5rem;  /* sm:px-10 */
+        padding-right: 2.5rem;
+    }
+}
+
+.about-mission-inner {
+    max-width: 48rem;   /* max-w-3xl */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-mission-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;          /* gap-4 */
+}
+
+/* icon bulat */
+.about-mission-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;        /* size-12 */
+    height: 3rem;
+    background-color: var(--about-brand-dark-chocolate);
+    color: var(--about-brand-parchment);
+    border-radius: 9999px; /* rounded-full */
+}
+
+.about-icon-large {
+    font-size: 1.875rem; /* text-3xl */
+}
+
+/* judul mission */
+.about-mission-title {
+    color: var(--about-brand-dark-chocolate);
+    font-size: 32px;        /* text-[32px] */
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+/* paragraf mission */
+.about-mission-paragraph {
+    color: var(--about-brand-coffee);
+    font-size: 1rem;        /* text-base */
+    font-weight: 400;
+    line-height: 1.7;       /* leading-relaxed */
+}
+
+/* ============================
+   GALLERY SECTION
+   ============================ */
+
+.about-gallery-section {
+    padding: 2.5rem 1rem;   /* py-10 px-4 */
+}
+
+@media (min-width: 640px) {
+    .about-gallery-section {
+        padding-left: 2.5rem;  /* sm:px-10 */
+        padding-right: 2.5rem;
+    }
+}
+
+.about-gallery-maxwidth {
+    max-width: 72rem;      /* max-w-6xl */
+    margin: 0 auto;
+}
+
+.about-gallery-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;             /* gap-4 */
+}
+
+/* judul gallery */
+.about-gallery-title {
+    color: var(--about-brand-dark-chocolate);
+    font-size: 28px;       /* text-[28px] */
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    padding-left: 1rem;    /* px-4 */
+    padding-right: 1rem;
+    padding-top: 1.25rem;  /* pt-5 */
+    padding-bottom: 0.75rem; /* pb-3 */
+}
+
+/* grid gambar */
+.about-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-cols-2 */
+    gap: 0.75rem;          /* gap-3 */
+    padding: 1rem;         /* p-4 */
+}
+
+@media (min-width: 768px) {
+    .about-gallery-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)); /* md:grid-cols-4 */
+    }
+}
+
+.about-gallery-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.about-gallery-image {
+    width: 100%;
+    border-radius: 0.5rem;        /* rounded-lg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    aspect-ratio: 1 / 1;          /* aspect-square */
+}
+
+/* ============================
+   SOCIAL MEDIA SECTION
+   ============================ */
+
+.about-social-section {
+    padding: 2.5rem 1rem;  /* py-10 px-4 */
+}
+
+@media (min-width: 640px) {
+    .about-social-section {
+        padding-left: 2.5rem;  /* sm:px-10 */
+        padding-right: 2.5rem;
+    }
+}
+
+.about-social-maxwidth {
+    max-width: 72rem;      /* max-w-6xl */
+    margin: 0 auto;
+}
+
+.about-social-card {
+    background-color: rgba(175, 143, 111, 0.4); /* bg-brand-tan/40 */
+    border-radius: 0.5rem;  /* rounded-lg */
+    padding: 2rem;          /* p-8 */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;            /* gap-6 */
+}
+
+/* judul social */
+.about-social-title {
+    color: var(--about-brand-dark-chocolate);
+    font-size: 1.5rem;      /* text-2xl */
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+@media (min-width: 768px) {
+    .about-social-title {
+        font-size: 1.875rem; /* md:text-3xl */
+    }
+}
+
+/* paragraf social */
+.about-social-paragraph {
+    color: var(--about-brand-coffee);
+    max-width: 32rem;      /* max-w-lg */
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ikon sosmed */
+.about-social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;             /* gap-4 */
+}
+
+.about-social-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;           /* size-12 */
+    height: 3rem;
+    border-radius: 9999px; /* rounded-full */
+    background-color: var(--about-brand-dark-chocolate);
+    color: var(--about-brand-parchment);
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.about-social-icon-link:hover {
+    background-color: var(--about-brand-coffee);
+}
+
+.about-social-icon {
+    width: 1.5rem;         /* size-6 */
+    height: 1.5rem;
 }

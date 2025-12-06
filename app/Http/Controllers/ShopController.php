@@ -19,20 +19,16 @@ class ShopController extends Controller
             'description' => 'A warm and comforting classic with a hint of cinnamon.',
             'price' => 3.50,
             'image' => 'https://via.placeholder.com/300/a0522d/ffffff?text=Oatmeal'
-        ],
-        3 => [
-            'name' => 'White Chocolate Macadamia',
-            'description' => 'Creamy white chocolate meets crunchy macadamia nuts.',
-            'price' => 3.75,
-            'image' => 'https://via.placeholder.com/300/dddddd/333333?text=White'
-        ],
-        4 => [
-            'name' => 'Double Fudge Brownie',
-            'description' => 'For the ultimate chocolate lover, dense and decadent.',
-            'price' => 3.75,
-            'image' => 'https://via.placeholder.com/300/3e2723/ffffff?text=Fudge'
         ]
     ];
+
+    /**
+     * Getter supaya controller lain bisa pakai data products yang sama
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
 
     // Menampilkan Halaman Toko
     public function index()
@@ -40,13 +36,13 @@ class ShopController extends Controller
         return view('shop', ['products' => $this->products]);
     }
 
-    // Menampilkan Halaman Keranjang
+    // Menampilkan Halaman Keranjang (lama, sekarang praktis tidak dipakai)
     public function cart()
     {
         return view('cart');
     }
 
-    // CREATE: Tambah Item (Redirect kembali ke halaman toko)
+    // CREATE: Tambah Item (versi lama, via ShopController)
     public function addToCart($id)
     {
         $product = $this->products[$id];
@@ -68,26 +64,22 @@ class ShopController extends Controller
         return redirect()->back()->with('success', 'Produk berhasil ditambahkan ke keranjang!');
     }
 
-    // UPDATE: Ubah Jumlah (Respon JSON untuk AJAX)
+    // UPDATE & REMOVE lama (boleh tetap ada, tapi sekarang update/remove dipakai dari CartController)
     public function update(Request $request)
     {
         if($request->id && $request->quantity){
             $cart = session()->get('cart');
             
-            // Update quantity di session
             $cart[$request->id]["quantity"] = $request->quantity;
             session()->put('cart', $cart);
             
-            // Hitung Subtotal Item ini (Harga x Qty baru)
             $itemSubtotal = $cart[$request->id]["quantity"] * $cart[$request->id]["price"];
             
-            // Hitung Total Belanja Keseluruhan
             $total = 0;
             foreach($cart as $item) {
                 $total += $item['price'] * $item['quantity'];
             }
 
-            // Kirim data JSON balik ke cart.js
             return response()->json([
                 'success' => true,
                 'itemSubtotal' => number_format($itemSubtotal, 2),
@@ -96,7 +88,6 @@ class ShopController extends Controller
         }
     }
 
-    // DELETE: Hapus Item (Respon JSON untuk AJAX)
     public function remove(Request $request)
     {
         if($request->id) {
@@ -107,7 +98,6 @@ class ShopController extends Controller
                 session()->put('cart', $cart);
             }
             
-            // Hitung Total Belanja Keseluruhan setelah dihapus
             $total = 0;
             foreach($cart as $item) {
                 $total += $item['price'] * $item['quantity'];

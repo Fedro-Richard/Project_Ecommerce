@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatbotController;
 use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\ShopController;
+use App\Http\Controllers\CartController;
 
 // --- 1. Halaman Statis & Umum ---
 Route::get('/', function () {
@@ -14,23 +15,22 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+// Chatbot
 Route::post('/chatbot/send', [ChatbotController::class, 'chat'])->name('chatbot.send');
 
-// --- 3. Fitur Toko & Keranjang (Shopping Cart) ---
-// Note: Route '/shop' yang menggunakan function() { return view('shop'); } SAYA HAPUS
-// karena kita harus menggunakan yang via Controller agar data produk muncul.
-
-// Halaman Katalog Produk
+// --- 2. Halaman Shop ---
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
 
-// Halaman Keranjang Belanja
-Route::get('/cart', [ShopController::class, 'cart'])->name('cart.index');
+// --- 3. Fitur Cart (hanya pakai CartController) ---
 
-// [CREATE] Tambah ke Keranjang
-Route::post('/add-to-cart/{id}', [ShopController::class, 'addToCart'])->name('cart.add');
+// Halaman keranjang
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
-// [UPDATE] Update Jumlah Barang (AJAX)
-Route::patch('/update-cart', [ShopController::class, 'update'])->name('cart.update');
+// Tambah item ke cart (dipanggil dari halaman shop)
+Route::post('/cart/add/{id}', [CartController::class, 'add'])->name('cart.add');
 
-// [DELETE] Hapus Barang (AJAX)
-Route::delete('/remove-from-cart', [ShopController::class, 'remove'])->name('cart.remove');
+// Update jumlah item (dipanggil via fetch dari tombol + / -)
+Route::post('/cart/update/{id}', [CartController::class, 'update'])->name('cart.update');
+
+// Hapus item dari cart (dipanggil via fetch dari tombol delete)
+Route::post('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');

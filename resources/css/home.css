@@ -1,35 +1,857 @@
+/* ============================
+   ICONS (DARI CSS LAMA)
+   ============================ */
+
 .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
-    'opsz' 24
+    'opsz' 24;
 }
 
-.user-profile-pic {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1swAOYA_AMfQJ7bvDXlOhKq_NjhAntAT74t-QvLpU0boL7U1aaqg8TydovuhIip4KTylKc2QNK6qRt4sDjIhPGdCegriQQykYu4djHRKPrZqPm3wSAHMM-3De6N5gW6vHQeOyn09HixWaz-a-i6HJ67OYVWD77Z1qovCAh5FCDQ-auR0QA0U630gnvobAG2J6566HWq_VdriW3JZ2F2dhUYMkD8SdCCRJhrcsOmfgWXid0hMBhkafCGJryNEpYJl3aSx8YDP7pAs");
+/* ============================
+   WARNA DASAR & TOKEN HOME
+   ============================ */
+
+:root {
+    /* ===== PALET GLOBAL (SAMA DENGAN style.css) ===== */
+    /* Latar dan teks utama */
+    --bg-color:      #592203;  /* dark brown agak maroon → background utama */
+    --text-color:    #f5f5dc;  /* light yellow / putih gading → warna teks utama */
+
+    /* Kartu dan border */
+    --card-bg:       #593a01;  /* dark brown → background card */
+    --border-color:  #b66828;  /* gray orange sebagai garis halus */
+
+    /* Tombol utama */
+    --btn-primary:   #fbab43;  /* orange terang → tombol utama */
+    --btn-hover:     #b66828;  /* gray orange → hover */
+    --btn-dark:      #593a01;  /* dark brown → tombol gelap / secondary */
+
+    /* ===== TOKEN KHUSUS HOME (MAPPING DARI PALET DI ATAS) ===== */
+    /* warna utama home */
+    --home-primary:           var(--card-bg);       /* dipakai judul, tombol, dll */
+    --home-primary-secondary: var(--border-color);  /* dipakai subjudul, harga, dll */
+
+    /* aksen */
+    --home-accent:            var(--btn-primary);   /* warna aksen / hover */
+
+    /* background terang & gelap untuk section home */
+    --home-bg-light:          var(--text-color);    /* teks / latar terang */
+    --home-bg-dark:           var(--bg-color);      /* latar gelap */
+
+    /* radius & font tetap */
+    --home-radius-lg:   0.5rem;
+    --home-radius-xl:   0.75rem;
+    --home-radius-full: 9999px;
+    --home-font-display: "Plus Jakarta Sans", system-ui, -apple-system,
+                         BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
+
+/* ============================
+   GLOBAL HOME WRAPPER
+   ============================ */
+body {
+    background-color: var(--home-bg-dark);   /* #592203 */
+    color: var(--home-bg-light);            /* #f5f5dc */
+}
+
+/* Semua wrapper section dikasih bg gelap juga */
+.home-hero-wrapper,
+.home-feature-header-wrapper,
+.home-feature-grid-wrapper,
+.home-about-wrapper {
+    background-color: var(--home-bg-dark);
+    padding-left: 1rem;   /* px-4 */
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    font-family: var(--home-font-display);
+}
+
+
+
+.home-hero-wrapper {
+    padding-top: 1.25rem; /* py-5 */
+    padding-bottom: 1.25rem;
+}
+
+.home-feature-header-wrapper {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+.home-feature-grid-wrapper {
+    padding-top: 0.5rem;  /* pt-2 */
+    padding-bottom: 2.5rem; /* pb-10 */
+}
+
+.home-about-wrapper {
+    padding-top: 2.5rem;  /* py-10 */
+    padding-bottom: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+    .home-hero-wrapper,
+    .home-feature-header-wrapper,
+    .home-feature-grid-wrapper,
+    .home-about-wrapper {
+        padding-left: 2.5rem;  /* lg:px-10 */
+        padding-right: 2.5rem;
+    }
+}
+
+/* layout-content-container sudah di-handle global, kita tambahkan sedikit */
+.home-hero-layout,
+.home-feature-header-layout,
+.home-feature-grid-layout,
+.home-about-card {
+    width: 100%;
+    max-width: 80rem; /* kurang lebih max-w-7xl */
+}
+
+/* ============================
+   HERO SECTION
+   ============================ */
+
+/* background hero dari CSS lama */
 .hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBSXInnVNdoRcb8u0hXft3yE5-aqRGVeIjy_ZfzNsOcUeGrKmEAWOADwjUBdlO7gOEaEgxxN3inkomUKInEZu7KX16fi6jw74tHEBLWbhKidK6LnZ5CBPaCy2ujqbOXG9vCTzOeOCVpp5VO9il8GCNe6vpsMooRvtdSXbH1N0UlPZVcI2U0PCegCY4avfmUvSxMFTR7__Mt6tsCY1h9K0NptsjEnhIT3-X-ZmwhzWEAK-lFT7mNZcTwFmsSd8IOe2I502xlMlPNUAc");
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%),
+        url("https://i.pinimg.com/736x/10/da/88/10da8828320007b8ce1199cbcf483b3f.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
+/* kontainer hero */
+.home-hero-container {
+    width: 100%;
+}
+
+.home-hero-inner {
+    width: 100%;
+}
+
+/* kartu hero utama */
+.home-hero-card {
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;              /* gap-6 */
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;            /* p-4 */
+    text-align: center;
+    border-radius: var(--home-radius-xl); /* rounded-xl */
+    color: #ffffff;
+}
+
+@media (min-width: 480px) {
+    .home-hero-card {
+        gap: 2rem;            /* @[480px]:gap-8 */
+    }
+}
+
+.home-hero-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;                /* gap-4 */
+}
+
+/* h1 hero */
+.home-hero-title {
+    color: var(--home-bg-light); /* text-background-light */
+    font-size: 2.25rem;          /* text-4xl */
+    line-height: 1.25;           /* leading-tight */
+    font-weight: 900;            /* font-black */
+    letter-spacing: -0.033em;
+}
+
+@media (min-width: 480px) {
+    .home-hero-title {
+        font-size: 3.75rem;      /* text-6xl */
+    }
+}
+
+/* h2 hero */
+.home-hero-subtitle {
+    color: var(--home-bg-light);
+    font-size: 1rem;             /* text-base */
+    line-height: 1.5;            /* leading-normal */
+    font-weight: 400;
+}
+
+@media (min-width: 480px) {
+    .home-hero-subtitle {
+        font-size: 1.125rem;     /* text-lg */
+    }
+}
+
+/* tombol utama hero */
+.home-hero-button {
+    display: flex;
+    min-width: 84px;
+    max-width: 480px;
+    height: 3rem;                /* h-12 */
+    padding: 0 1.25rem;          /* px-5 */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--home-radius-lg);
+    background-color: var(--home-primary);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;             /* text-base */
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.home-hero-button:hover {
+    background-color: var(--home-primary-secondary);
+}
+
+/* dark mode versi sederhana, kalau kamu pakai .dark di html/body */
+.dark .home-hero-button {
+    background-color: var(--home-primary);
+}
+
+.dark .home-hero-button:hover {
+    background-color: var(--home-primary-secondary);
+}
+
+/* truncate text (dipakai di span tombol) */
+.home-truncate {
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ============================
+   SECTION HEADER "OUR FEATURED COOKIES"
+   ============================ */
+
+.home-section-title {
+    color: var(--home-bg-light);   /* dulu var(--home-primary) */
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.25rem;
+    padding-bottom: 0.75rem;
+    text-align: center;
+}
+
+
+.dark .home-section-title {
+    color: var(--home-bg-light);
+}
+
+/* ============================
+   GRID FEATURED COOKIES
+   ============================ */
+
+.home-feature-grid-layout {
+    width: 100%;
+    max-width: 48rem;      /* lebih sempit, mirip feel 2 card di shop */
+    margin: 0 auto;        /* center di tengah */
+}
+
+/* grid utama 1 / 2 kolom */
+.home-feature-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;                 /* gap-6 */
+    padding: 1rem;               /* p-4 */
+}
+
+@media (min-width: 640px) {
+    .home-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)); /* cuma 2 kolom */
+    }
+}
+
+
+/* kartu cookie */
+/* kartu cookie */
+.home-cookie-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem 1.5rem 1.75rem;
+    border-radius: var(--home-radius-xl);
+    background-color: var(--card-bg);   /* #593a01 */
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+
+    /* tambahan supaya tinggi card seragam */
+    height: 100%;
+}
+
+/* pembungkus gambar */
+.home-cookie-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;                /* aspect-square, sama seperti shop */
+    border-radius: var(--home-radius-xl);
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* gambar di dalam (aspect-square + hover zoom) */
+.home-cookie-image-inner {
+    position: absolute;
+    inset: 0;                         /* top:0; right:0; bottom:0; left:0 */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+/* efek hover seperti group-hover:scale-110 */
+.home-cookie-card:hover .home-cookie-image-inner {
+    transform: scale(1.07);
+}
+
+/* GAMBAR COOKIES (dari CSS lama, dipertahankan) */
 .cookie-img-1 {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAf3pKZTBBWeO44MICxvUnOUCxGG-FpSZaNPFN-jfw7bbMeDQg8hHTZSeuSnYrtSI2wOL64DmAN4XjPnyzo3HyJmtIRTEte24DQC_Smk7UXKbPVyu1l1h72H5pNfL0eejD83lBA4PYrFPX5zRid_K86P_gLZlCSKL60yyRgt5gkkchvt7rFfQ6a7LhWDoVr3N499wTy8FbkzJDQTB1CUYuiYb-qzYxXRjnicWt5Pgdlw0kOGcp5PfqgyFp2ez0vhPSYug6Ia_Prgk");
+    background-image: url("https://i.pinimg.com/736x/9f/84/a8/9f84a83fda0713b6af57cde3ee97ccb4.jpg");
 }
 
 .cookie-img-2 {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBesqIAZa7rpFWMNmamvOer3IeSyGXj-Udxf7EEjY7oCzH8zJij8zMtnJvEcgqTHpyLUVGE6xc4Pen6bxeRMigPLRLSYdut3RqWW6DgHkmygluUclvauR9jihq1WO3nb3an95-hzBCdXY2krybytIuG9p1Hl2ACsuLJInCspSHJQs2b99WL8-ZSXCs8usZ-RtGD0BYRxN4BP1BxqFDh9D-z2HiVFEz8_j0kRYs5bH35jzGbmTu3fdPAyHoGqETwyVNurrn4DkLaXoY");
+    background-image: url("https://i.pinimg.com/736x/b3/6f/6f/b36f6ff2af8d5a7b3ebf60c09363b481.jpg");
 }
 
-.cookie-img-3 {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBNyYFS2z-NwfpzmoNrASoWJsbMfSPT04F6ANe0K7xXuAwE-af-4O7bKhvhEUanSJJl07Le4IZP5V4XGUV5Xpzzj3cLzXsIQihApPBuhXVq0uP39kMCmo9bnJqppS1MN0UZ8XTWnfrP5sa7LiHVdBisiliM-OXSZWwFwAq1x6XyF4u5___zE2HOZRhkrjsdEiQT8b-kkkEFVZRWK2ILrkEM2hpa_t6BD5wWLU6H4Ot_fKOeDnGsjqsbKmoz_m39GjZiQc_UEzQov5g");
+
+/* teks di card */
+.home-cookie-textblock {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    /* tambahan: biar teks jadi area fleksibel */
+    flex: 1 1 auto;
 }
 
-.cookie-img-4 {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAajCLlwH5UJiBZ8P7N7SHjwnVHNrNryplNBaONUIz9S-_P33ovXOZ3yrBIVIrpl4u7bC-MKBM5QKsPUsPn1E2XyftYjM1LA3wUah_jOQo6cYnlyIwcdtqh9oubfKBdiN0qwN6NSHrdLqk9B99whMvdb9hyj83jRzZ_AcGNkYBN_KY69glHJ7D5oEHLmJh-9WU1IEA8U7Rjh2uRWOnCekFUK509D-ztONzRMkPDa8fDT2Qu9IO-sFHXyxh9Gjs_yHP629DCXsjH5PY");
+
+.home-cookie-name {
+    color: var(--home-bg-light);   /* #f5f5dc */
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5;
+
+    /* tambahan: clamp 2 baris */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    min-height: 0.5rem; /* kira-kira 2 baris line-height 1.5 */
 }
 
+.dark .home-cookie-name {
+    color: var(--home-bg-light);
+}
+
+.home-cookie-desc {
+    color: var(--home-accent);     /* #fbab43 atau gray-orange */
+    font-size: 0.875rem;
+    line-height: 1.5;
+
+    /* tambahan: clamp 2 baris */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    min-height: 3.2em; /* tinggi fix 2 baris */
+}
+
+.dark .home-cookie-desc {
+    color: var(--home-accent);
+}
+
+.home-cookie-price {
+    margin-top: 0.1rem;
+    color: var(--home-accent);     /* biar stand out */
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+
+.dark .home-cookie-price {
+    color: var(--home-accent);
+}
+
+/* tombol sekunder Add to Cart */
+.home-cookie-button-secondary {
+    margin-top: 0em;      /* dorong tombol ke bagian paling bawah card */
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--home-radius-lg);
+    border: none;
+    cursor: pointer;
+
+    background-color: var(--btn-primary);   /* #fbab43 */
+    color: var(--card-bg);                  /* teks coklat gelap */
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.1s ease;
+}
+
+
+.home-cookie-button-secondary:hover {
+    background-color: var(--btn-hover);     /* #b66828 */
+    color: var(--home-bg-light);            /* teks jadi terang */
+    transform: translateY(-1px);
+}
+
+
+/* dark mode */
+.dark .home-cookie-button-secondary {
+    background-color: rgba(175, 143, 111, 0.2); /* bg-accent/20 */
+    color: var(--home-accent);
+}
+
+.dark .home-cookie-button-secondary:hover {
+    background-color: var(--home-primary);
+    color: #ffffff;
+}
+
+/* ============================
+   ABOUT US SECTION
+   ============================ */
+
+.home-about-card {
+    background-color: var(--card-bg);    /* #593a01 */
+    border-radius: var(--home-radius-xl);
+    padding: 2rem;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+    .home-about-card {
+        padding: 3rem;            /* md:p-12 */
+    }
+}
+
+.dark .home-about-card {
+    background-color: rgba(175, 143, 111, 0.1); /* dark:bg-accent/10 */
+}
+
+/* grid 1 / 2 kolom */
+.home-about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;                    /* gap-8 */
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .home-about-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3rem;                /* md:gap-12 */
+    }
+}
+
+/* gambar about */
+.home-about-image {
+    width: 100%;
+    border-radius: var(--home-radius-lg); /* rounded-lg */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 75%;              /* aspect-[4/3] */
+}
+
+/* about-us-img dari CSS lama */
 .about-us-img {
-    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAkeIt_V_yH3IfofteynXXZg1agi6W8dDTiBLOq8SprMfi7kPcdVcoq_s0ehJcmAknWR96gmaMeBYRKRoMZuuINN6Myn9ZQfmDtTMs5SiqGuogwRCPghm1pM-0CJNL3Df5CQtDiMfUPUOYlsk2aW3VHfCdlYBSwzpoHSTnnUVnYRS32KCpJXyAUjrT_6D7pMrgqnYOyE48GLj8OuOQcXJw6_rlN9A1GVua7R2qbLwUxBtSqQ5yNyYGyNlG6n3gTPrInlOg7mJYtwSk");
+    background-image: url("https://i.pinimg.com/736x/cb/96/e4/cb96e4f5a9093a1c23a777eb8e3de12d.jpg");
+}
+
+/* kolom teks about */
+.home-about-textcol {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* judul about */
+.home-about-title {
+    color: var(--home-bg-light);         /* judul terang */
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+}
+.dark .home-about-title {
+    color: var(--home-bg-light);
+}
+
+/* deskripsi about */
+.home-about-description {
+    color: var(--home-accent);           /* teks deskripsi warm */
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.dark .home-about-description {
+    color: var(--home-accent);
+}
+
+/* tombol Learn More */
+.home-about-button {
+    margin-top: 1rem;            /* mt-4 */
+    display: inline-flex;
+    width: fit-content;
+    height: 3rem;                /* h-12 */
+    padding: 0 1.25rem;          /* px-5 */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--home-radius-lg);
+    background-color: var(--home-primary);
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.015em;
+    text-decoration: none;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.home-about-button:hover {
+    background-color: var(--home-primary-secondary);
+}
+
+.dark .home-about-button {
+    background-color: var(--home-primary);
+}
+
+.dark .home-about-button:hover {
+    background-color: var(--home-primary-secondary);
+}
+
+/* ============================
+   USER PROFILE PIC (dari CSS lama)
+   ============================ */
+
+.user-profile-pic {
+    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1swAOYA_AMfQJ7bvDXlOhKq_NjhAntAT74t-QvLpU0boL7U1aaqg8TydovuhIip4KTylKc2QNK6qRt4sDjIhPGdCegriQQykYu4djHRKPrZqPm3wSAHMM-3De6N5gW6vHQeOyn09HixWaz-a-i6HJ67OYVWD77Z1qovCAh5FCDQ-auR0QA0U630gnvobAG2J6566HWq_VdriW3JZ2F2dhUYMkD8SdCCRJhrcsOmfgWXid0hMBhkafCGJryNEpYJl3aSx8YDP7pAs");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ============================
+   REVIEW SECTION
+   ============================ */
+
+.home-review-wrapper {
+    background-color: var(--home-bg-dark);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2.5rem;   /* py-10 */
+    padding-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .home-review-wrapper {
+        padding-left: 2.5rem;   /* lg:px-10 */
+        padding-right: 2.5rem;
+    }
+}
+
+.home-review-layout {
+    width: 100%;
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;        /* kurang lebih gap-10 */
+}
+
+/* Header */
+
+.home-review-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.home-review-title {
+    color: var(--home-bg-light);
+    font-size: 1.875rem;   /* text-3xl */
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+}
+
+.home-review-subtitle {
+    color: var(--home-accent);
+    font-size: 1.125rem;   /* text-lg */
+    max-width: 32rem;      /* max-w-2xl */
+    line-height: 1.6;
+}
+
+/* Grid cards */
+
+.home-review-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;             /* gap-8 */
+}
+
+@media (min-width: 768px) {
+    .home-review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .home-review-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.home-review-card {
+    background-color: #f5f5dc;          /* mirip bg-white tapi masih sejalan palet */
+    border-radius: var(--home-radius-xl);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid rgba(251, 171, 67, 0.3);  /* var(--home-accent)/20 */
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.home-review-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.home-review-avatar {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 9999px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-review-profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.home-review-name {
+    font-weight: 700;
+    color: var(--home-bg-dark);
+}
+
+.home-review-stars {
+    display: flex;
+    gap: 0.1rem;
+}
+
+/* Star styling */
+
+.home-review-star-filled {
+    font-size: 1.25rem;
+    color: #f59e0b; /* text-amber-500 */
+    font-variation-settings: 'FILL' 1;
+}
+
+.home-review-star-outline {
+    font-size: 1.25rem;
+    color: #f59e0b;
+    font-variation-settings: 'FILL' 0;
+}
+
+.home-review-text {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    color: #5b4326;  /* coklat lembut supaya terbaca di card terang */
+}
+
+/* Form card */
+
+.home-review-form-card {
+    background-color: rgba(251, 171, 67, 0.2);    /* accent/20 */
+    border-radius: var(--home-radius-xl);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .home-review-form-card {
+        padding: 2.5rem;      /* md:p-10 */
+    }
+}
+
+.home-review-form-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--home-bg-light);
+}
+
+.home-review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+        /* baru: bikin semua field agak masuk dari tepi card */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.home-review-form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .home-review-form-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+.home-review-form-row-single {
+    width: 100%;
+}
+
+.home-review-input,
+.home-review-textarea {
+    width: 100%;
+    border-radius: var(--home-radius-lg);
+    border: 1px solid rgba(251, 171, 67, 0.3);
+    background-color: var(--home-bg-light);
+    color: var(--home-bg-dark);
+    font-size: 0.875rem;
+    padding: 0.75rem 1rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: var(--home-font-display);
+}
+
+.home-review-input::placeholder,
+.home-review-textarea::placeholder {
+    color: #b88c60;   /* warm placeholder */
+}
+
+.home-review-input:focus,
+.home-review-textarea:focus {
+    border-color: var(--home-primary-secondary);
+    box-shadow: 0 0 0 2px rgba(252, 186, 67, 0.4);
+}
+
+.home-review-textarea {
+    resize: vertical;
+}
+
+/* Footer form */
+
+.home-review-form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+
+}
+
+@media (min-width: 640px) {
+    .home-review-form-footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.home-review-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.home-review-rating-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--home-accent);
+}
+
+.home-review-rating-stars {
+    display: flex;
+    gap: 0.1rem;
+    cursor: pointer;
+}
+
+.home-review-star-interactive {
+    font-size: 1.75rem;
+    color: rgba(245, 158, 11, 0.5);
+    transition: color 0.2s ease;
+}
+
+.home-review-star-interactive:hover {
+    color: #f59e0b;
+}
+
+/* Submit button */
+
+.home-review-submit-button {
+    width: 100%;
+    height: 3rem;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--home-radius-lg);
+    border: none;
+    cursor: pointer;
+    background-color: var(--home-primary);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.1s ease;
+}
+
+@media (min-width: 640px) {
+    .home-review-submit-button {
+        width: auto;
+    }
+}
+
+.home-review-submit-button:hover {
+    background-color: var(--home-primary-secondary);
+    transform: translateY(-1px);
 }
