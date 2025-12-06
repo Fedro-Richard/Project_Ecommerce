@@ -11,6 +11,11 @@ Route::get('/', function () {
     return view('about'); // Halaman landing page (About Us)
 })->name('about');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+
 Route::get('/home', function () {
     return view('home');
 })->name('home');

@@ -17,7 +17,7 @@
                         data-alt="A delicious spread of freshly baked cookies on a rustic wooden table">
                         <div class="home-hero-text-group">
                             <h1 class="home-hero-title">
-                                Freshly Baked Artisanal Cookies
+                                Florenoria
                             </h1>
                             <h2 class="home-hero-subtitle">
                                 Made with love and the finest ingredients, delivered warm to your door.
@@ -53,10 +53,11 @@
                     </div>
                     <div class="home-cookie-textblock">
                         <p class="home-cookie-name">
-                            Chocolate Chunk Classic
+                            Tim ORIGINAL – Si Klasik Elegan
                         </p>
                         <p class="home-cookie-desc">
-                            The timeless favorite, packed with rich chocolate chunks.
+                            Varian Original memadukan almond, biji bunga matahari, biji labu, serta wijen hitam & putih. Rasanya renyah, gurih, dan manis ringan, dengan karamel lembut yang menyatukan semuanya. Camilan sehat yang ringan dan kaya rasa.
+Tersedia 4 pcs dalam setiap pack
                         </p>
                         <p class="home-cookie-price">
                             $3.50
@@ -80,10 +81,11 @@
                     </div>
                     <div class="home-cookie-textblock">
                         <p class="home-cookie-name">
-                            Oatmeal Raisin Spice
+                            Tim COKLAT – Si Manis Menggoda
                         </p>
                         <p class="home-cookie-desc">
-                            A warm and comforting classic with a hint of cinnamon.
+                            Varian Coklat menggabungkan kacang dan biji-bijian premium dengan lelehan coklat. Rasa manis-bitter coklat berpadu dengan karamel dan kerenyahan bahan, menghasilkan sensasi indulgent yang menggoda.
+Tersedia 4 pcs dalam setiap pack
                         </p>
                         <p class="home-cookie-price">
                             $3.50
@@ -113,15 +115,14 @@
                         Our Story
                     </h2>
                     <p class="home-about-description">
-                        It all started in a small kitchen with a big dream: to create the perfect cookie. At
-                        Cookie Co., we believe that the best treats are made with passion and the finest
-                        ingredients. Every cookie is a piece of our heart, baked from scratch daily to bring
-                        a moment of joy to your day. We're more than just a bakery; we're a community of
-                        cookie lovers sharing a sweet tradition.
+                        Florenoria lahir dari proyek kuliah tiga mahasiswa yang ingin menghadirkan cemilan sehat tanpa mengorbankan rasa. 
+                        Terinspirasi dari florentine cookies yang renyah, bernutrisi, dan naturally wholesome, kami meracik setiap kepingan dengan bahan premium dan pendekatan artisan untuk menghasilkan camilan yang elegan, modern, dan mindful. 
+                        Florenoria hadir sebagai pilihan manis yang lebih baik. Memadukan rasa yang refined dengan manfaat kebaikan kacang dan natural ingredients, sehingga setiap gigitan bukan hanya enak, tapi juga mendukung gaya hidup yang lebih seimbang. 
                     </p>
-                    <a href="{{ url('/about') }}" class="home-about-button">
+                    <a href="{{ route('about') }}" class="home-about-button">
                         <span class="home-truncate">Learn More</span>
                     </a>
+
                 </div>
             </div>
         </div>

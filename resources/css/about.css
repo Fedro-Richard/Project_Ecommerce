@@ -4,10 +4,12 @@
 
 .font-serif { 
     font-family: 'Lora', serif; 
+    color:#f5f5dc;
+    text-align: center;
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(84, 51, 16, 0.4) 0%, rgba(84, 51, 16, 0.6) 100%), url("https://i.pinimg.com/736x/10/da/88/10da8828320007b8ce1199cbcf483b3f.jpg");
+    background-image: url("https://i.pinimg.com/736x/46/04/be/4604be41355bbf469f432ac46a388882.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -122,7 +124,7 @@
 
 /* judul hero */
 .about-hero-title {
-    color: #ffffff;
+    color: var(--about-brand-parchment);
     font-size: 2.25rem;   /* text-4xl */
     font-weight: 700;
     line-height: 1.25;    /* leading-tight */
@@ -157,6 +159,7 @@
     padding: 2.5rem 1rem; /* py-10 px-4 */
     background-color: #593a01;/* bg-brand-tan/20 -> pakai #fbab43 */
     margin-bottom: 50px;
+    border-radius: 10px;
 }
 
 @media (min-width: 640px) {
@@ -214,6 +217,7 @@
     font-size: 1rem;                     /* text-base */
     font-weight: 400;
     line-height: 1.7;                    /* leading-relaxed */
+    text-align: justify;
 }
 
 /* ============================
@@ -223,6 +227,7 @@
 .about-mission-section {
     padding: 2.5rem 1rem; /* py-10 px-4 */
     background-color: rgba(251, 171, 67, 0.2); /* bg-brand-tan/20 -> pakai #fbab43 */
+    border-radius: 10px;
 }
 
 @media (min-width: 640px) {
@@ -275,6 +280,7 @@
     font-size: 1rem;        /* text-base */
     font-weight: 400;
     line-height: 1.7;       /* leading-relaxed */
+    text-align: justify;
 }
 
 /* ============================
@@ -350,7 +356,9 @@
    ============================ */
 
 .about-social-section {
-    padding: 2.5rem 1rem;  /* py-10 px-4 */
+    padding: 2.5rem 1rem;      /* py-10 px-4 */
+    background-color: #593a01; /* sama dengan about-story-section */
+    border-radius: 10px;
 }
 
 @media (min-width: 640px) {
@@ -361,12 +369,14 @@
 }
 
 .about-social-maxwidth {
-    max-width: 72rem;      /* max-w-6xl */
+    max-width: 72rem;  /* max-w-6xl */
     margin: 0 auto;
+
 }
 
+
 .about-social-card {
-    background-color: rgba(251, 171, 67, 0.4); /* pakai orange accent/40 */
+    background-color: transparent;
     border-radius: 0.5rem;  /* rounded-lg */
     padding: 2rem;          /* p-8 */
     text-align: center;
@@ -374,7 +384,13 @@
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;            /* gap-6 */
+
+    /* KUNCI ALIGNMENT SAMA SECTION LAIN */
+    width: 100%;
+    max-width: 48rem;       /* sama seperti about-mission-inner */
+    margin: 0 auto;         /* center di dalam about-social-maxwidth */
 }
+
 
 /* judul social */
 .about-social-title {
@@ -396,15 +412,24 @@
     max-width: 32rem;      /* max-w-lg */
     font-size: 1rem;
     line-height: 1.6;
+    text-align: justify;
 }
 
+/* ikon sosmed */
 /* ikon sosmed */
 .about-social-icons {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;             /* gap-4 */
+    gap: 1rem;          /* gap-4 */
+
+    /* KUNCI BIAR NGUMPUL DI TENGAH */
+    max-width: 12rem;   /* lebar kecil, cuma selebar ikon */
+    margin-left: auto;  /* center horizontal */
+    margin-right: auto;
+    /* jangan pakai width: 100% di sini */
 }
+
 
 .about-social-icon-link {
     display: flex;
@@ -427,4 +452,13 @@
 .about-social-icon {
     width: 1.5rem;         /* size-6 */
     height: 1.5rem;
+}
+
+/* khusus layar >= 640px, paksa blok ikon benar-benar di tengah */
+@media (min-width: 640px) {
+    .about-social-icons {
+        max-width: 12rem;      /* lebar kecil, cuma selebar ikon */
+        margin-left: auto;     /* center secara horizontal */
+        margin-right: auto;
+    }
 }

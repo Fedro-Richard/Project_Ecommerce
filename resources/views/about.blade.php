@@ -9,16 +9,11 @@
         <div class="about-hero-maxwidth">
             <div class="about-hero-container">
                 <div class="about-hero-padding">
+                    <h1 class="font-serif about-hero-title">
+                                Manfaat dan Nutrisi Cookies Florenoria
+                            </h1>
                     <div class="about-hero-card hero-bg"
                         data-alt="A warm, inviting shot of freshly baked cookies on a rustic wooden table.">
-                        <div class="about-hero-textgroup">
-                            <h1 class="font-serif about-hero-title">
-                                Baked with Love, From Our Kitchen to Yours.
-                            </h1>
-                            <h2 class="about-hero-subtitle">
-                                Discover the story behind our irresistibly delicious, handcrafted cookies.
-                            </h2>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -36,11 +31,9 @@
                         How It All Began
                     </h2>
                     <p class="about-story-paragraph">
-                        Our journey started in a small home kitchen with a passion for creating the perfect
-                        cookie. We believe in using only the finest, all-natural ingredients to bake treats
-                        that bring joy and comfort to every bite. What began as a simple hobby has blossomed
-                        into a beloved brand, but our core values remain the same: quality, community, and
-                        the simple happiness found in a perfectly baked cookie.
+                        Florenoria lahir dari proyek kuliah tiga mahasiswa yang ingin menghadirkan cemilan sehat tanpa mengorbankan rasa. 
+                        Terinspirasi dari florentine cookies yang renyah, bernutrisi, dan naturally wholesome, kami meracik setiap kepingan dengan bahan premium dan pendekatan artisan untuk menghasilkan camilan yang elegan, modern, dan mindful. 
+                        Florenoria hadir sebagai pilihan manis yang lebih baik. Memadukan rasa yang refined dengan manfaat kebaikan kacang dan natural ingredients, sehingga setiap gigitan bukan hanya enak, tapi juga mendukung gaya hidup yang lebih seimbang. 
                     </p>
                 </div>
             </div>
@@ -58,11 +51,10 @@
                     Our Promise To You
                 </h2>
                 <p class="about-mission-paragraph">
-                    At Cookie Co., we're committed to more than just baking. We promise to use only the
-                    highest quality, ethically sourced ingredients. We promise that every cookie is baked
-                    fresh with care and attention to detail. Most importantly, we promise to deliver a
-                    moment of pure delight with every order, ensuring your satisfaction from the first click
-                    to the last crumb.
+                    Florenoria menghadirkan cookies florentine yang bukan cuma lezat, tapi juga kaya manfaat untuk mendukung keseharianmu.
+                     Kombinasi lemak sehat, protein nabati, serta serat alami membantu menjaga jantung, menstabilkan energi, dan menunjang pencernaan dengan lebih baik.
+                     Diperkaya vitamin, mineral, dan antioksidan alami, setiap gigitannya memberi dukungan bagi imunitas, metabolisme, hingga kesehatan jangka panjang.
+                     Menjadikan Cookies kami sebagai pilihan camilan sehat yang tetap terasa indulgent tanpa kompromi.
                 </p>
             </div>
         </div>
@@ -105,8 +97,9 @@
                     Join Our Sweet Community
                 </h3>
                 <p class="about-social-paragraph">
-                    Follow our journey on social media for behind-the-scenes peeks, new flavor announcements,
-                    and special offers!
+                    Terima kasih telah memilih Florenoria sebagai teman camilanmu. 
+                    Kami senang bisa menemani perjalananmu menuju gaya hidup yang lebih seimbang dan berkualitas.
+                     Tetap jaga pola hidup sehat dengan menikmati pilihan cookies florentine kami yang lezat sekaligus bernutrisi
                 </p>
                 <div class="about-social-icons">
                     <a aria-label="Instagram" href="https://www.instagram.com/florenoriaa/" class="about-social-icon-link">

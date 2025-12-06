@@ -9,14 +9,16 @@ class ShopController extends Controller
     // Data Dummy (Simulasi Database)
     private $products = [
         1 => [
-            'name' => 'Chocolate Chunk Classic',
-            'description' => 'The timeless favorite, packed with rich chocolate chunks.',
+            'name' => 'Tim ORIGINAL – Si Klasik Elegan',
+            'description' => 'Varian Original memadukan almond, biji bunga matahari, biji labu, serta wijen hitam & putih. Rasanya renyah, gurih, dan manis ringan, dengan karamel lembut yang menyatukan semuanya. Camilan sehat yang ringan dan kaya rasa.
+Tersedia 4 pcs dalam setiap pack',
             'price' => 3.50,
             'image' => 'https://via.placeholder.com/300/2c2c2c/ffffff?text=Choco'
         ],
         2 => [
-            'name' => 'Oatmeal Raisin Spice',
-            'description' => 'A warm and comforting classic with a hint of cinnamon.',
+            'name' => 'Tim COKLAT – Si Manis Menggoda',
+            'description' => 'Varian Coklat menggabungkan kacang dan biji-bijian premium dengan lelehan coklat. Rasa manis-bitter coklat berpadu dengan karamel dan kerenyahan bahan, menghasilkan sensasi indulgent yang menggoda.
+Tersedia 4 pcs dalam setiap pack',
             'price' => 3.50,
             'image' => 'https://via.placeholder.com/300/a0522d/ffffff?text=Oatmeal'
         ]

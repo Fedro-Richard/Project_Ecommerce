@@ -205,7 +205,7 @@ body {
 
 .cart-item-price-single {
     font-size: 0.85rem;
-    color: var(--home-accent);
+    color: var(--btn-dark);
 }
 
 /* kontrol quantity */
@@ -353,7 +353,7 @@ body {
 .summary-secure-text {
     font-size: 0.7rem;
     text-align: center;
-    color: var(--home-accent);
+    color: var(--btn-dark);
 }
 
 /* ============================
