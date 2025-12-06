@@ -39,14 +39,16 @@
 
 /* ============================
    COLOR TOKENS UNTUK ABOUT PAGE
+   (PAKAI PALETTE HOME)
    ============================ */
 
 :root {
-    --about-brand-dark-chocolate: #543310;
-    --about-brand-coffee: #74512D;
-    --about-brand-tan: #AF8F6F;
-    --about-brand-parchment: #F8F4E1;
-    --about-bg-main: #F8F4E1;
+    /* mapping ke palette global home.css */
+    --about-brand-dark-chocolate: #593a01; /* dark brown / card */
+    --about-brand-coffee:         #b66828; /* gray orange */
+    --about-brand-tan:            #fbab43; /* orange accent */
+    --about-brand-parchment:      #f5f5dc; /* light yellow */
+    --about-bg-main:              #592203; /* dark brown maroon background */
 }
 
 /* ============================
@@ -153,6 +155,8 @@
 
 .about-story-section {
     padding: 2.5rem 1rem; /* py-10 px-4 */
+    background-color: #593a01;/* bg-brand-tan/20 -> pakai #fbab43 */
+    margin-bottom: 50px;
 }
 
 @media (min-width: 640px) {
@@ -198,18 +202,18 @@
 
 /* judul story */
 .about-story-title {
-    color: var(--about-brand-dark-chocolate); /* text-brand-dark-chocolate */
-    font-size: 32px;                          /* text-[32px] */
+    color: var(--about-brand-parchment); /* pakai light seperti home */
+    font-size: 32px;                     /* text-[32px] */
     font-weight: 700;
-    line-height: 1.25;                        /* leading-tight */
+    line-height: 1.25;                   /* leading-tight */
 }
 
 /* paragraf story */
 .about-story-paragraph {
-    color: var(--about-brand-coffee);         /* text-brand-coffee */
-    font-size: 1rem;                          /* text-base */
+    color: var(--about-brand-tan);       /* orange accent */
+    font-size: 1rem;                     /* text-base */
     font-weight: 400;
-    line-height: 1.7;                         /* leading-relaxed */
+    line-height: 1.7;                    /* leading-relaxed */
 }
 
 /* ============================
@@ -218,7 +222,7 @@
 
 .about-mission-section {
     padding: 2.5rem 1rem; /* py-10 px-4 */
-    background-color: rgba(175, 143, 111, 0.2); /* bg-brand-tan/20 */
+    background-color: rgba(251, 171, 67, 0.2); /* bg-brand-tan/20 -> pakai #fbab43 */
 }
 
 @media (min-width: 640px) {
@@ -248,8 +252,8 @@
     justify-content: center;
     width: 3rem;        /* size-12 */
     height: 3rem;
-    background-color: var(--about-brand-dark-chocolate);
-    color: var(--about-brand-parchment);
+    background-color: var(--about-brand-parchment);
+    color: var(--about-brand-dark-chocolate);
     border-radius: 9999px; /* rounded-full */
 }
 
@@ -259,7 +263,7 @@
 
 /* judul mission */
 .about-mission-title {
-    color: var(--about-brand-dark-chocolate);
+    color: var(--about-brand-parchment);
     font-size: 32px;        /* text-[32px] */
     font-weight: 700;
     line-height: 1.25;
@@ -267,7 +271,7 @@
 
 /* paragraf mission */
 .about-mission-paragraph {
-    color: var(--about-brand-coffee);
+    color: var(--about-brand-tan);
     font-size: 1rem;        /* text-base */
     font-weight: 400;
     line-height: 1.7;       /* leading-relaxed */
@@ -301,7 +305,7 @@
 
 /* judul gallery */
 .about-gallery-title {
-    color: var(--about-brand-dark-chocolate);
+    color: var(--about-brand-parchment);
     font-size: 28px;       /* text-[28px] */
     font-weight: 700;
     line-height: 1.25;
@@ -362,7 +366,7 @@
 }
 
 .about-social-card {
-    background-color: rgba(175, 143, 111, 0.4); /* bg-brand-tan/40 */
+    background-color: rgba(251, 171, 67, 0.4); /* pakai orange accent/40 */
     border-radius: 0.5rem;  /* rounded-lg */
     padding: 2rem;          /* p-8 */
     text-align: center;
@@ -374,7 +378,7 @@
 
 /* judul social */
 .about-social-title {
-    color: var(--about-brand-dark-chocolate);
+    color: var(--about-brand-parchment);
     font-size: 1.5rem;      /* text-2xl */
     font-weight: 700;
     line-height: 1.25;
@@ -388,7 +392,7 @@
 
 /* paragraf social */
 .about-social-paragraph {
-    color: var(--about-brand-coffee);
+    color: var(--about-brand-tan);
     max-width: 32rem;      /* max-w-lg */
     font-size: 1rem;
     line-height: 1.6;
@@ -409,14 +413,15 @@
     width: 3rem;           /* size-12 */
     height: 3rem;
     border-radius: 9999px; /* rounded-full */
-    background-color: var(--about-brand-dark-chocolate);
-    color: var(--about-brand-parchment);
+    background-color: var(--about-brand-parchment);
+    color: var(--about-brand-dark-chocolate);
     text-decoration: none;
-    transition: background-color 0.25s ease;
+    transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .about-social-icon-link:hover {
-    background-color: var(--about-brand-coffee);
+    background-color: var(--about-brand-tan);
+    color: var(--about-brand-dark-chocolate);
 }
 
 .about-social-icon {
