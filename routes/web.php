@@ -20,6 +20,12 @@ Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+// --- 4. Halaman Admin Dashboard ---
+Route::get('/admin/dashboard', function () {
+    return view('dashboard');   // resources/views/dashboard.blade.php
+})->name('admin.dashboard');
+
+
 // Chatbot
 Route::post('/chatbot/send', [ChatbotController::class, 'chat'])->name('chatbot.send');
 
