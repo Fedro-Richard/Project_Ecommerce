@@ -51,7 +51,13 @@
                     >
                         Home
                     </a>
-
+                    <a
+                        href="{{ route('about') }}"
+                        class="site-nav-link {{ Request::routeIs('about') ? 'is-active' : '' }}"
+                    >
+                        About Us
+                    </a>
+                    
                     <a
                         href="{{ route('shop.index') }}"
                         class="site-nav-link {{ Request::routeIs('shop.index') ? 'is-active' : '' }}"
@@ -59,12 +65,7 @@
                         Shop
                     </a>
 
-                    <a
-                        href="{{ route('about') }}"
-                        class="site-nav-link {{ Request::routeIs('about') ? 'is-active' : '' }}"
-                    >
-                        About Us
-                    </a>
+                    
                 </nav>
 
                 <!-- Icon Cart -->
