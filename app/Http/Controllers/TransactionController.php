@@ -31,4 +31,13 @@ class TransactionController extends Controller
 
         return back()->with('success', 'Transaction status updated successfully.');
     }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(Transaction $transaction)
+    {
+        $transaction->delete();
+        return back()->with('success', 'Transaction deleted successfully.');
+    }
 }
