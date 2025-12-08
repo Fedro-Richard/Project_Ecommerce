@@ -33,6 +33,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     
     Route::get('/admin/transactions', [TransactionController::class, 'index'])->name('admin.transactions.index');
     Route::patch('/admin/transactions/{transaction}', [TransactionController::class, 'update'])->name('admin.transactions.update');
+    Route::delete('/admin/transactions/{transaction}', [TransactionController::class, 'destroy'])->name('admin.transactions.destroy');
 });
 
 

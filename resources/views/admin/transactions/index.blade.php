@@ -125,6 +125,14 @@
                                 <option value="cancelled" {{ $transaction->status == 'cancelled' ? 'selected' : '' }}>Cancelled</option>
                             </select>
                         </form>
+                        <form action="{{ route('admin.transactions.destroy', $transaction->id) }}" method="POST" class="mt-2 inline-block">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('Are you sure you want to delete this transaction?')" 
+                                    class="text-[10px] font-bold uppercase tracking-wider bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700 transition-colors">
+                                Delete
+                            </button>
+                        </form>
                     </td>
                 </tr>
                 @empty
