@@ -12,14 +12,14 @@ class ShopController extends Controller
             'name' => 'Tim ORIGINAL – Si Klasik Elegan',
             'description' => 'Varian Original memadukan almond, biji bunga matahari, biji labu, serta wijen hitam & putih. Rasanya renyah, gurih, dan manis ringan, dengan karamel lembut yang menyatukan semuanya. Camilan sehat yang ringan dan kaya rasa.
 Tersedia 4 pcs dalam setiap pack',
-            'price' => 3.50,
+            'price' => 15000,
             'image' => 'https://via.placeholder.com/300/2c2c2c/ffffff?text=Choco'
         ],
         2 => [
             'name' => 'Tim COKLAT – Si Manis Menggoda',
             'description' => 'Varian Coklat menggabungkan kacang dan biji-bijian premium dengan lelehan coklat. Rasa manis-bitter coklat berpadu dengan karamel dan kerenyahan bahan, menghasilkan sensasi indulgent yang menggoda.
 Tersedia 4 pcs dalam setiap pack',
-            'price' => 3.50,
+            'price' => 15000,
             'image' => 'https://via.placeholder.com/300/a0522d/ffffff?text=Oatmeal'
         ]
     ];
@@ -84,8 +84,8 @@ Tersedia 4 pcs dalam setiap pack',
 
             return response()->json([
                 'success' => true,
-                'itemSubtotal' => number_format($itemSubtotal, 2),
-                'total' => number_format($total, 2)
+                'itemSubtotal' => number_format($itemSubtotal, 0, ',', '.'),
+                'total' => number_format($total, 0, ',', '.')
             ]);
         }
     }
@@ -107,7 +107,7 @@ Tersedia 4 pcs dalam setiap pack',
 
             return response()->json([
                 'success' => true,
-                'total' => number_format($total, 2)
+                'total' => number_format($total, 0, ',', '.')
             ]);
         }
     }

@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ChatbotController;
-use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\TransactionController;
 
 // --- 1. Halaman Statis & Umum ---
 Route::get('/', function () {
@@ -15,15 +16,24 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-
 Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+// --- Auth Routes ---
+Route::get('/admin/login', [AuthController::class, 'showLogin'])->name('login');
+Route::post('/admin/login', [AuthController::class, 'login'])->name('login.post');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
 // --- 4. Halaman Admin Dashboard ---
-Route::get('/admin/dashboard', function () {
-    return view('dashboard');   // resources/views/dashboard.blade.php
-})->name('admin.dashboard');
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin', function () {
+        return view('dashboard');
+    })->name('admin.dashboard');
+    
+    Route::get('/admin/transactions', [TransactionController::class, 'index'])->name('admin.transactions.index');
+    Route::patch('/admin/transactions/{transaction}', [TransactionController::class, 'update'])->name('admin.transactions.update');
+});
 
 
 // Chatbot
@@ -32,8 +42,12 @@ Route::post('/chatbot/send', [ChatbotController::class, 'chat'])->name('chatbot.
 // --- 2. Halaman Shop ---
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
 
-// --- 3. Fitur Cart (hanya pakai CartController) ---
+// --- 2.5 Halaman Checkout ---
+Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout.index');
+Route::post('/checkout/process', [App\Http\Controllers\CheckoutController::class, 'process'])->name('checkout.process');
 
+
+// --- 3. Fitur Cart (hanya pakai CartController) ---
 // Halaman keranjang
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 

@@ -55,8 +55,8 @@ class ChatbotController extends Controller
             $prompt = "
                 Kamu CS toko 'Florenoria'. User: $userName.
                 Menu: 
-                1. Tim ORIGINAL (3.50) - Varian Original dengan kacang & biji-bijian.
-                2. Tim COKLAT (3.50) - Varian Coklat dengan lelehan coklat & karamel.
+                1. Tim ORIGINAL (15000) - Varian Original dengan kacang & biji-bijian.
+                2. Tim COKLAT (15000) - Varian Coklat dengan lelehan coklat & karamel.
                 
                 History Chat:
                 $historyText
@@ -87,7 +87,7 @@ class ChatbotController extends Controller
                 Session::put('order_state', 'asking_payment_method'); 
                 Session::forget('chat_history'); 
 
-                return response()->json(['reply' => $cleanReply . "\n\nTotal: **$" . number_format($total, 2) . "**. \n\nMau bayar via **COD** atau **QRIS**? \n*(Ketik 'batal' jika ingin cancel)*"]);
+                return response()->json(['reply' => $cleanReply . "\n\nTotal: **Rp " . number_format($total, 0, ',', '.') . "**. \n\nMau bayar via **COD** atau **QRIS**? \n*(Ketik 'batal' jika ingin cancel)*"]);
             }
             
             return response()->json(['reply' => $botReply]);
@@ -179,7 +179,7 @@ class ChatbotController extends Controller
                     $total = $cart['qty'] * $cart['price_per_item'];
                     $qrisImage = "images/WhatsApp Image 2025-12-04 at 15.00.41_f394179e.jpg";
 
-                    return response()->json(['reply' => "Data tercatat! Total **$" . number_format($total, 2) . "**.\nSilakan scan QRIS di bawah ini:\n\n<img src='$qrisImage' alt='QRIS Code' style='max-width:100%; border-radius:10px; margin: 10px 0;'>\n\n� **Silakan upload bukti bayar di sini ya!**"]);
+                    return response()->json(['reply' => "Data tercatat! Total **Rp " . number_format($total, 0, ',', '.') . "**.\nSilakan scan QRIS di bawah ini:\n\n<img src='$qrisImage' alt='QRIS Code' style='max-width:100%; border-radius:10px; margin: 10px 0;'>\n\n� **Silakan upload bukti bayar di sini ya!**"]);
                 }
             } else {
                 return response()->json(['reply' => "Maaf, data alamatnya kurang lengkap/jelas. Bisa tulis ulang **Nama, Alamat, No HP**?"]);
@@ -190,8 +190,12 @@ class ChatbotController extends Controller
         if ($orderState == 'waiting_transfer_proof') {
             
             if ($request->hasFile('payment_proof')) {
-               
                 $file = $request->file('payment_proof');
+
+                // Validasi Ukuran 2MB (2048 KB)
+                if ($file->getSize() > 2048 * 1024) {
+                    return response()->json(['reply' => "Waduh, gambarnya kegedean kak! 😅 Maksimal **2MB** ya. Coba kompres dulu atau kirim SS yang lebih kecil."]);
+                }
                 $filename = time() . '_' . $file->getClientOriginalName();
                 $file->move(public_path('uploads/proof'), $filename);
                 

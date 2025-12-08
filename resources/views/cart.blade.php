@@ -24,7 +24,7 @@
                         <div class="cart-item-info">
                             <h3 class="cart-item-name">{{ $details['name'] }}</h3>
                             <p class="cart-item-price-single">
-                                Price: ${{ number_format($details['price'], 2) }}
+                                Price: Rp {{ number_format($details['price'], 0, ',', '.') }}
                             </p>
                         </div>
 
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="cart-item-total">
-                            ${{ number_format($details['price'] * $details['quantity'], 2) }}
+                            Rp {{ number_format($details['price'] * $details['quantity'], 0, ',', '.') }}
                         </div>
 
                         <button class="remove-btn">
@@ -57,7 +57,7 @@
                     <div class="summary-row">
                         <span>Subtotal</span>
                         <span id="cart-subtotal">
-                            ${{ number_format($subtotal, 2) }}
+                            Rp {{ number_format($subtotal, 0, ',', '.') }}
                         </span>
                     </div>
 
@@ -73,11 +73,11 @@
                     <div class="summary-row summary-total-row">
                         <span>Total</span>
                         <span class="summary-total-amount" id="cart-total">
-                            ${{ number_format($total, 2) }}
+                            Rp {{ number_format($total, 0, ',', '.') }}
                         </span>
                     </div>
 
-                    <button class="checkout-button">Checkout</button>
+                    <a href="{{ route('checkout.index') }}" class="checkout-button" style="display:block; text-align:center; text-decoration:none;">Checkout</a>
                     <p class="summary-secure-text">Secure Checkout Process</p>
                 </div>
             </aside>
@@ -150,17 +150,17 @@ document.addEventListener('DOMContentLoaded', () => {
                     qtyValEl.textContent = currentQty;
 
                     // update total item
-                    itemTotalEl.textContent = '$' + data.item_total;
+                    itemTotalEl.textContent = 'Rp ' + data.item_total;
 
                     // update subtotal & total summary
                     const subtotalEl = document.getElementById('cart-subtotal');
                     const totalEl = document.getElementById('cart-total');
 
                     if (subtotalEl && typeof data.subtotal !== 'undefined') {
-                        subtotalEl.textContent = '$' + data.subtotal;
+                        subtotalEl.textContent = 'Rp ' + data.subtotal;
                     }
                     if (totalEl && typeof data.grand_total !== 'undefined') {
-                        totalEl.textContent = '$' + data.grand_total;
+                        totalEl.textContent = 'Rp ' + data.grand_total;
                     }
                 })
                 .catch(err => {

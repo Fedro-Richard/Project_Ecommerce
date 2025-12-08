@@ -60,7 +60,7 @@
 Tersedia 4 pcs dalam setiap pack
                         </p>
                         <p class="home-cookie-price">
-                            $3.50
+                            Rp 15.000
                         </p>
                     </div>
 
@@ -88,7 +88,7 @@ Tersedia 4 pcs dalam setiap pack
 Tersedia 4 pcs dalam setiap pack
                         </p>
                         <p class="home-cookie-price">
-                            $3.50
+                            Rp 15.000
                         </p>
                     </div>
 

@@ -36,7 +36,7 @@
 
                             <div class="shop-card-footer">
                                 <span class="shop-card-price">
-                                    ${{ number_format($details['price'], 2) }}
+                                    Rp {{ number_format($details['price'], 0, ',', '.') }}
                                 </span>
                             </div>
 
