@@ -343,6 +343,7 @@ body {
     letter-spacing: 0.02em;
     transition: background-color 0.2s ease, transform 0.1s ease;
     margin-bottom: 0.6rem;
+    text-align: center;
 }
 
 .checkout-button:hover {
